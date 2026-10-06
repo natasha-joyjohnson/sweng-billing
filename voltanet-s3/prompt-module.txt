@@ -1,0 +1,34 @@
+HOW TO USE THIS FILE (step 5: each pair, ONE of its modules, not the coordinator)
+  0. Fill EVERY block of the module, not only the [NEEDED TODAY] ones: especially the
+     one that puts its data in (store, report, record...). Without it the real module
+     has no way to learn anything, and its tests can only cheat. Given WITH TYPES.
+  1. Keep the stub: copy modules/<module_name>.py to modules/<module_name>_stub.py.
+     If anything below goes wrong, copy it back, and the subsystem runs as before.
+  2. In your interfaces file, write three acceptance criteria for the module, at the
+     end of its section: «given ..., when ..., then ...». One must be about the case
+     where the thing asked about does not exist.
+  3. Copy everything below the line «----- copy from here -----» into your assistant.
+     Where it says PASTE HERE, paste that module's section of your interfaces file:
+     its blocks AND its three criteria.
+  4. Read its list of guesses: a wrong guess about a type (text where your caller
+     passes a datetime) makes the module refuse everything. Fix the block and ask
+     again if needed. Then save the code as modules/<module_name>.py.
+  5. In modules/, run python <module_name>.py: its tests must pass. Then run
+     python run.py my_subsystem_with_modules.py: the calls must still be made, AND
+     read what «came back»: a refusal or an error means the module and its caller
+     disagree (a name, an input, a type).
+
+----- copy from here -----
+Write a first real version of the Python module described below.
+
+- Python 3, standard library only.
+- One file, holding one class named after the module in CamelCase.
+- Exactly the methods of the «Card» blocks: names from «Method», parameters
+  from «Given» (plus self), answers as in «Answers», including what to answer
+  when the thing asked about does not exist.
+- Keep data in memory (dictionaries, lists): no files, no database.
+- After the code, write one small test function per acceptance criterion,
+  using plain assert, and a line that runs them when the file is run directly.
+- Then list anything you had to guess.
+
+PASTE HERE:

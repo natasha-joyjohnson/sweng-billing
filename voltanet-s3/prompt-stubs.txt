@@ -1,0 +1,24 @@
+HOW TO USE THIS FILE (step 3)
+  1. Copy everything below the line «----- copy from here -----» into your AI assistant.
+  2. At the end, where it says PASTE HERE, paste the blocks of ONE module from your
+     interfaces file (all the «Card …» blocks under one «MODULE:» heading).
+     Skip a module none of whose blocks you filled: the assistant would invent it.
+  3. Read its list of guesses FIRST: each one is a hole in your table. Fix the block
+     and ask again if a guess is wrong. Then save the code as modules/<module_name>.py
+     (for example modules/certified_records.py).
+  4. Run python run.py. It must still run. Then the next module.
+
+----- copy from here -----
+Write a Python stub for the module described below.
+
+- Python 3, standard library only.
+- One file, holding one class named after the module in CamelCase
+  (module «Certified records» -> class CertifiedRecords).
+- One method per «Card» block, named as in its «Method» line, with exactly the
+  parameters listed in its «Given» line (plus self).
+- Each method does NOTHING except return the value in its «The stub answers»
+  line. No logic, no checks, no storage, no imports from other modules.
+- A one-line docstring per method: what it answers, from the «Answers» line.
+- After the code, list anything you had to guess.
+
+PASTE HERE:

@@ -1,0 +1,97 @@
+INTERFACES · team S3 · PAIR A · Monday 5 October
+
+Pre-filled from the module cards YOUR TEAM handed in on 28 September
+(module names, card numbers, what each card line does, who calls it).
+
+Your modules (pair A): Billing desk, Billing ledger
+The other pair's:      Tariff book, Quotes register, Price calculator
+(A trio in a team of five: move one module between the two files.)
+
+STEP 2: fill the four empty lines of every block, [NEEDED TODAY] first.
+  Method            a name for the method, in lower case: store, record_of, may_charge.
+                    A card that needs two or three methods: all their names, with
+                    commas, and say in Given and Answers which is which.
+  Given             what it receives, in plain words, WITH TYPES: «a session id (text)»,
+                    «when it starts (a datetime)», «the price (a Decimal)»
+  Answers           what it gives back; AND what it gives back when the thing
+                    asked about does not exist
+  The stub answers  one fixed, plausible example of the answer, of the SAME TYPES
+                    the real one will have (a datetime, not «14:50»)
+  Where a block is «Called by» one of the other pair's modules, agree it with them.
+
+STEP 3: paste the blocks of one module at a time into prompt-stubs.txt. Do NOT
+        paste a module none of whose blocks you filled: the assistant invents one.
+STEP 4 (pair A): my_subsystem_with_modules.py hands each request to your modules.
+STEP 5: for ONE of your modules (not the coordinator): first fill EVERY block of
+        that module, including the one that puts its data in; then three acceptance
+        criteria at the end of its section; then prompt-module.txt.
+
+============================================================================
+MODULE: Billing desk  (the coordinator)
+============================================================================
+
+Card r1  [NEEDED TODAY]
+  What it must do:   Quotes a binding price before charging starts
+  Called by:         S4 (my_subsystem.price_quote)
+  Method:            
+  Given:             
+  Answers:           
+  The stub answers:  
+
+Card r2  [NEEDED TODAY]
+  What it must do:   Prices a completed session
+  Called by:         #12 (my_subsystem.session_ended)
+  Method:            
+  Given:             
+  Answers:           
+  The stub answers:  
+
+Card r3
+  What it must do:   Takes the rule for which tariff wins
+  Called by:         the commercial department
+  Method:            
+  Given:             
+  Answers:           
+  The stub answers:  
+
+Card r4
+  What it must do:   Gives a driver's charging history
+  Called by:         S4, not in iteration one
+  Method:            
+  Given:             
+  Answers:           
+  The stub answers:  
+
+Card r5
+  What it must do:   Handles a request to delete personal data
+  Called by:         S4, not in iteration one
+  Method:            
+  Given:             
+  Answers:           
+  The stub answers:  
+
+============================================================================
+MODULE: Billing ledger
+============================================================================
+
+Card r1  [NEEDED TODAY]
+  What it must do:   Records a priced session and keeps it ten years, or holds it as pending
+  Called by:         Billing desk
+  Method:            
+  Given:             
+  Answers:           
+  The stub answers:  
+
+Card r2
+  What it must do:   Finds a driver's sessions and removes their personal data, keeping amounts and readings
+  Called by:         Billing desk
+  Method:            
+  Given:             
+  Answers:           
+  The stub answers:  
+
+Acceptance criteria for Billing ledger (step 5, only if you choose this module):
+  1. 
+  2. 
+  3. 
+
